@@ -56,9 +56,9 @@ stack.push(tail)
 #untuk mengecek apakah checkpoint
 def is_checkpoint(x, y):
     if (x>0 and x<len(arr)-1 and y>0 and y<len(arr[0])-1):
-        if (arr[x][y-1]!=1 and arr[x][y+1]!=1 and arr[x-1][y]==1 and arr[x+1][y]==1): #vertikal
+        if (arr[x][y-1]!=1 and arr[x][y+1]!=1 and arr[x-1][y]==1 and arr[x+1][y]==1): #koordinat yang bukan chekpoint (jalan lurus horizontal)
             return False
-        if (arr[x][y-1]==1 and arr[x][y+1]==1 and arr[x-1][y]!=1 and arr[x+1][y]!=1): #horizontal
+        if (arr[x][y-1]==1 and arr[x][y+1]==1 and arr[x-1][y]!=1 and arr[x+1][y]!=1): #koordinat yang bukan chekpoint (jalan lurus vertikal)
             return False
         return True
     return True
